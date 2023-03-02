@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spreadsheet Data</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="rowData : ${rowDataList}">
+                <td th:text="${rowData.column1}"></td>
+                <td th:text="${rowData.column2}"></td>
+                <td th:text="${rowData.column3}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
